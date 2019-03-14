@@ -27,16 +27,3 @@ mongoose.connection.on('error', () => {
 mongoose.connection.on('disconnected', () => {
   console.log('连接断开');
 })
-
-/**
- * 定义Scheme模板
- */
-const userScheme = new mongoose.Schema({
-  _id: String,
-  name: String
-})
-/**
- * 将Scheme发布为model
- */
-mongoose.model('Zhangli', userScheme, 'zhangli');
-module.exports = mongoose
